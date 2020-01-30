@@ -1,0 +1,40 @@
+<template>
+  <div class="root">
+    <h1>Focus Blur</h1>
+  </div>
+</template>
+<style scoped>
+.root {
+  width: 100%;
+  height: 100%;
+  font-family: "Anton", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(#80adc3, #495e69);
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 10em;
+  color: #fff;
+  text-transform: uppercase;
+  transform: rotate(-20deg) skew(25deg);
+  animation: animate 5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: rotate(-20deg) skew(25deg) translate(0, 0);
+    text-shadow: -5px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: rotate(-20deg) skew(25deg) translate(50px, -50px);
+    text-shadow: -50px 50px 0 rgba(0, 0, 0, 0.2);
+    filter: blur(15px);
+  }
+}
+</style>
+
