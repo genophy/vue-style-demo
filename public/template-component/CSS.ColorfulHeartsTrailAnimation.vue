@@ -16,13 +16,12 @@
 -->
 
 <template>
-    <div class="root" ref="root" @mousemove="handleMouseMove">
+    <div class="root" ref="root">
 
     </div>
 </template>
 
 <script>
-import CommonsUtil from '@/libs/utils/commons.util';
 
 export default {
     name    : 'CSS.GlowingLoadingText',
@@ -34,28 +33,27 @@ export default {
     created() {
     },
     mounted() {
+        this.$refs.root.addEventListener('mousemove', (e) => {
+            const heart = document.createElement('span');
+
+            const x = e.offsetX;
+            const y = e.offsetY;
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+            const size = Math.random() * 50;
+            heart.style.width = heart.style.height = `${size + 20}px`;
+            this.$refs.root.append(heart);
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        });
     },
     methods : {
         /* _____________________________________________________________________________________ */
         /* _____________________________________________________________________________________ */
         /* _____________________________________________________________________________________ */
         /* _____________________ [ handle ] ____________________________________________________ */
-        handleMouseMove(e) {
-            const heart = document.createElement('span');
-            CommonsUtil.debounce('heart', () => {
-                const x = e.offsetX;
-                const y = e.offsetY;
-                heart.style.left = `${x}px`;
-                heart.style.top = `${y}px`;
-                const size = Math.random() * 50;
-                heart.style.width = heart.style.height = `${size + 20}px`;
-                this.$refs.root.append(heart);
-                setTimeout(() => {
-                    heart.remove();
-                }, 2000);
-            }, 5, true);
 
-        }
         /* _____________________________________________________________________________________ */
         /* _____________________________________________________________________________________ */
         /* _____________________________________________________________________________________ */
