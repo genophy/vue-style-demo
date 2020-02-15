@@ -24,7 +24,7 @@
 <script>
 
 export default {
-    name    : 'CSS.GlowingLoadingText',
+    name    : 'CSS.ColorfulHeartsTrailAnimation',
     props   : {},
     data() {
         return {};
