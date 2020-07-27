@@ -25,7 +25,7 @@
                 <span>@520space</span>
                 <span>genophy@gmail.com</span>
                 <span>用于个人学习测试的网站</span>
-                <span>苏ICP备18068907号</span>
+                <a target="_blank" href="http://www.beian.miit.gov.cn" style="display:inline-block;text-decoration:none;height:14px;line-height:14px;color:#4980b7;">苏ICP备18068907号</a>
             </div>
             <div style="margin:0 auto;">
                 <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011302320662"
@@ -303,7 +303,7 @@ export default {
         color     : #4980b7;
         padding   : 3px 0;
 
-        > span {
+        > * {
             padding : 0 5px;
 
             &:not(:first-child) {
