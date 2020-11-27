@@ -15,15 +15,11 @@ module.exports = {
         // 允许关键字后存在空格
         'key-spacing'                : 0,
         // 缩进4个空格
-        'indent'                     : ['warn', 4, {'SwitchCase': 1}],
+        'indent'                     : ['warn', 2, {'SwitchCase': 1}],
         // 方法参数之前有空格，关闭
         'space-before-function-paren': 0,
         'object-curly-spacing'       : 0,
-        'vue/no-parsing-warn'        : [
-            4, {
-                'x-invalid-end-tag': false
-            }
-        ],
+        'vue/no-parsing-warn'        : 0,
         // 声明之后，必须加上封号
         'semi'                       : ['warn', 'always'],
         'camelcase'                  : 0,
